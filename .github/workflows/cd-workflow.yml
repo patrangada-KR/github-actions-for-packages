@@ -3,9 +3,8 @@
 name: Docker CD
 
 on:
-  push:
-    paths:
-    - "**Dockerfile**"
+  push
+
 
 jobs:
   build:
@@ -65,5 +64,5 @@ jobs:
         username: ${{github.actor}}
         password: ${{secrets.GITHUB_TOKEN}}
         registry: docker.pkg.github.com
-        repository: patrangada-KR/github-actions-for-packages/tic-tac-toe
+        repository: patrangada-kr/github-actions-for-packages/tic-tac-toe
         tag_with_sha: true
